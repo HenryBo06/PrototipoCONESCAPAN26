@@ -1,0 +1,20 @@
+relative_path,size_bytes,sha256,computed_at_utc
+outputs/extended/tables/cuda_vs_cpu_xgboost_comparison.csv,1892,13f72dce997057abb9fe60883a1b57ea2604fa58cde5303aa570fce2d25d967f,2026-09-23T08:44:25+00:00
+outputs/extended/tables/experiment_history.csv,3676,e4eac602ec9f5ca1db0b73a201da43018bd438e379807e719158fe9fe6833a87,2026-09-23T08:44:25+00:00
+outputs/extended/tables/extended_comparison_with_previous.csv,4887,dcc6475c5edbb37feb0397dad0e012cecbd8921a6b2efeafff5d5599c21cd384,2026-09-23T08:44:25+00:00
+outputs/extended/tables/extended_dataset_manifest.csv,894079,e5cd169b2cbf3d006409d0effca54c94f23d0b9d83231ec33c7e749aef05bcae,2026-09-23T08:44:25+00:00
+outputs/extended/tables/extended_permutation_importance.csv,257281,2014e8e7de9b63eb8bad57ce43bbc45fa51a1055351df8b2193b4c955a02d896,2026-09-23T08:44:25+00:00
+outputs/extended/tables/extended_run_metrics.csv,113109,fd658a8e33eb6c185e3f1cee892e4130f1dd2fccec07932d0ac9c2252d180a54,2026-09-23T08:44:25+00:00
+outputs/extended/tables/extended_summary_metrics.csv,8885,1bca7f8d7d8684641ea5800489bea49c3a54561d6c216f6f64c13ce4ce33f056,2026-09-23T08:44:25+00:00
+outputs/extended/data/extended_training_windows.csv,399515230,b654c201d7876f507c7f222b1ab3dd57f24177d20bc27b675c571179e6b2c247,2026-09-23T08:44:25+00:00
+data/processed/training_dataset.csv,206803693,6db82fa51e681919bfa8fb635a1f950f2e99ed4c247612cde080958ae7f1a9c5,2026-09-23T08:44:25+00:00
+data/processed/training_dataset_auditable_public.csv,183471558,b1e0f02f0b40fdd87ee5dbb3cd499504842edcdd1577c0f6234b508a76b9d98f,2026-09-23T08:44:25+00:00
+data/processed/training_dataset_research_readable.csv,183471558,b1e0f02f0b40fdd87ee5dbb3cd499504842edcdd1577c0f6234b508a76b9d98f,2026-09-23T08:44:26+00:00
+outputs/dataset_source_manifest.csv,61093624,9d139d25e74f7d583cc8731b96e38e6717cc335df7c378487edc51b9aca4c0ea,2026-09-23T08:44:26+00:00
+outputs/run_registry.csv,10871,1ece55c037dd0498ba3d7f92e380dee4b39210368ccb272a394a38c040d82829,2026-09-23T08:44:26+00:00
+outputs/final_metrics.csv,3967,56a4810fbde8a43ea96eb996190fd30fefc56a683fceab8e2523fda6e55c31f9,2026-09-23T08:44:26+00:00
+outputs/final_metrics_by_evidence_type.csv,14159,3b269a147efb50f1b48a992357eaeb39b9b29d38ade96a93065b1df7515a8877,2026-09-23T08:44:26+00:00
+outputs/final_confusion_matrices.csv,11190,72a043f5bcb136cf93d4e900fead24c0e4b14dd9de142afc436cd935528cd65c,2026-09-23T08:44:26+00:00
+outputs/final_confusion_matrices_by_run.csv,13279,9fca490599e87a2cfd168a702acf0abba7a779e0b017437d76e3f91d2f2d62dc,2026-09-23T08:44:26+00:00
+../TraceRCA-main/rca_all_dataset.csv,5639513755,45083ec9aae6ff433f70c148689ee00df9bcd94079c0674acb33e8688b0b4241,2026-09-23T08:44:30+00:00
+../Train Ticket system/train-ticket-microservice-2/script/results/locust_requests.csv,519916,9a532528f4d584c028fd7e586adf1744f363ec37111a10a372c2082271939d20,2026-09-23T08:44:30+00:00

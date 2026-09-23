@@ -1,0 +1,28 @@
+source,experimental_view,model,f1,auc_roc,precision,recall,notes
+previous_final_metrics,Sock Shop CSV-wide metrics evaluation,Autoencoder,0.0916359598122421,0.4925910503526381,0.1345006442780093,0.0695296523517382,main CSV-wide claim
+previous_final_metrics,Sock Shop CSV-wide metrics evaluation,XGBoost,0.2869445580613242,0.7421871305670038,0.1675173413787084,0.9995455578277664,main CSV-wide claim
+previous_final_metrics,TraceRCA CSV-wide evaluation,Autoencoder,0.844783562059444,0.9665285465525546,0.9383719199163926,0.7692222222222221,main CSV-wide claim
+previous_final_metrics,TraceRCA CSV-wide evaluation,XGBoost,0.9974502637666022,0.999969693601571,0.9952442629630216,0.9996666666666668,main CSV-wide claim
+previous_final_metrics,TrainTicket graph-cache evaluation,Autoencoder,0.4990773997765841,0.6530857354028085,0.9382598581041992,0.341991341991342,limited/supporting evidence
+previous_final_metrics,TrainTicket graph-cache evaluation,XGBoost,0.8916592130250766,0.9819448843839088,0.9973439153439152,0.8062770562770561,limited/supporting evidence
+previous_runner_real_dataset_results,trainticket,XGBoost,1.0,1.0,1.0,1.0,runner before extended suite
+previous_runner_real_dataset_results,trainticket,Autoencoder,0.6692160611854685,0.897379679144385,0.9562841530054644,0.5147058823529411,runner before extended suite
+previous_runner_real_dataset_results,tracerca,XGBoost,1.0,1.0,1.0,1.0,runner before extended suite
+previous_runner_real_dataset_results,tracerca,Autoencoder,0.6692160611854685,0.897379679144385,0.9562841530054644,0.5147058823529411,runner before extended suite
+previous_runner_real_dataset_results,sockshop,XGBoost,0.2848749731317618,0.8754557330261943,0.1664712778429073,0.9866004962779156,runner before extended suite
+previous_runner_real_dataset_results,sockshop,Autoencoder,0.0987838173243981,0.5651513036293498,0.0988083416087388,0.0987593052109181,runner before extended suite
+current_extended_suite,Sock Shop scenario-aware metrics evaluation,Autoencoder,0.1752219963358882,0.4949558613981376,0.2268591388080646,0.1427371213796153,"scenario-aware: train normal + container-chaos, validate container-chaos, test node-chaos"
+current_extended_suite,Sock Shop scenario-aware metrics evaluation,RandomForest,0.2282181012790898,0.5006029936420376,0.22760720788069827,0.27373424718107453,"scenario-aware: train normal + container-chaos, validate container-chaos, test node-chaos"
+current_extended_suite,Sock Shop scenario-aware metrics evaluation,XGBoost,0.3713190054174924,0.4999625005860081,0.22986281097109695,0.9667256245854521,"scenario-aware: train normal + container-chaos, validate container-chaos, test node-chaos"
+current_extended_suite,TrainTicket graph-cache derived multimodal tensors,Autoencoder,0.5043219715097488,0.7711908545197741,0.9042161102801556,0.35234375,chronological
+current_extended_suite,TrainTicket graph-cache derived multimodal tensors,RandomForest,0.9994801817168527,1.0,0.9989623847654936,1.0,chronological
+current_extended_suite,TrainTicket graph-cache derived multimodal tensors,XGBoost,1.0,1.0,1.0,1.0,chronological
+current_extended_suite,TraceRCA-main rca_all_dataset explicit-label CSV,Autoencoder,0.9803436678314128,0.9973516869526076,0.9659848952384162,0.9951515461806266,chronological
+current_extended_suite,TraceRCA-main rca_all_dataset explicit-label CSV,RandomForest,0.9969319955543907,0.9999941860939009,0.9998403622501213,0.9940405488429244,chronological
+current_extended_suite,TraceRCA-main rca_all_dataset explicit-label CSV,XGBoost,0.996746031051015,0.9999965181802042,0.9999948496085702,0.9935183288961704,chronological
+current_extended_suite,TraceRCA all dataset recursive service-fault CSV windows,Autoencoder,0.3461161886063149,0.44079966329966325,0.8921921799625114,0.215625,stratified fallback because chronological test lacked both classes
+current_extended_suite,TraceRCA all dataset recursive service-fault CSV windows,RandomForest,0.9981228162712016,1.0,0.9989630815717773,0.9972916666666667,stratified fallback because chronological test lacked both classes
+current_extended_suite,TraceRCA all dataset recursive service-fault CSV windows,XGBoost,0.999791449426486,1.0,1.0,0.9995833333333334,stratified fallback because chronological test lacked both classes
+current_extended_suite,RCAEval recursive service-fault CSV windows,Autoencoder,0.31576043416789956,0.4229455236486486,0.8718771038612484,0.19333333333333333,stratified fallback because chronological test lacked both classes
+current_extended_suite,RCAEval recursive service-fault CSV windows,RandomForest,0.9979138024434124,1.0,0.9987611719570483,0.9970833333333333,stratified fallback because chronological test lacked both classes
+current_extended_suite,RCAEval recursive service-fault CSV windows,XGBoost,0.9992685464041786,1.0,1.0,0.9985416666666665,stratified fallback because chronological test lacked both classes
