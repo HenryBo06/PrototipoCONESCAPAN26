@@ -10,6 +10,7 @@ import csv
 import html
 import io
 import math
+import os
 from pathlib import Path
 from urllib.parse import urlsplit
 
@@ -124,15 +125,51 @@ def qr_png(url: str) -> str:
 
 
 def current_url() -> str | None:
-    url = st.context.url
-    parsed = urlsplit(url)
+    # ponytail: orden explícito ?public= > secrets > env > url actual; localhost jamás es público.
+    try:
+        query = st.query_params.get("public")
+    except Exception:
+        query = None
+    if query:
+        return query
+    try:
+        secret = st.secrets.get("PUBLIC_URL")
+    except Exception:
+        secret = None
+    if secret:
+        return str(secret).strip()
+    env = os.environ.get("PUBLIC_URL")
+    if env and env.strip():
+        return env.strip()
+    try:
+        url = st.context.url
+    except Exception:
+        return None
+    parsed = urlsplit(url or "")
     if parsed.scheme not in ("http", "https") or not parsed.netloc:
+        return None
+    if parsed.hostname in ("localhost", "127.0.0.1"):
         return None
     return url
 
 
 def qr_button(url: str | None) -> None:
     if not url:
+        with st.expander("Compartir / QR (falta URL pública)", expanded=False):
+            st.warning("Esta copia corre en local (localhost): el QR aún no tiene un enlace público que los teléfonos puedan abrir.")
+            st.caption("Despliega la app en Streamlit Community Cloud y pega aquí la URL pública para generar el QR. También puedes abrir la app con ?public=TU_URL.")
+            pasted = st.text_input("URL pública de la app", placeholder="https://....streamlit.app")
+            pasted = (pasted or "").strip()
+            if pasted:
+                safe_pasted = html.escape(pasted, quote=True)
+                st.html(
+                    f'<div class="qr-card" style="position:static;width:245px;margin-top:8px">'
+                    f'<strong>Escanea para abrir el dashboard</strong>'
+                    f'<img src="data:image/png;base64,{qr_png(pasted)}" alt="Código QR para abrir esta página">'
+                    f'<a href="{safe_pasted}" target="_blank" rel="noopener noreferrer">{safe_pasted}</a>'
+                    f'</div>'
+                )
+                st.download_button("Descargar QR (PNG)", base64.b64decode(qr_png(pasted)), "qr-dashboard.png", "image/png")
         return
     safe_url = html.escape(url, quote=True)
     st.html(
@@ -157,6 +194,7 @@ def qr_button(url: str | None) -> None:
         '</script>',
         unsafe_allow_javascript=True,
     )
+    st.download_button("Descargar QR (PNG)", base64.b64decode(qr_png(url)), "qr-dashboard.png", "image/png")
 
 
 def safe_preview(path: Path) -> list[dict[str, str]]:
